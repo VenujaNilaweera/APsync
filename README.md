@@ -219,11 +219,3 @@ if __name__ == "__main__":
 
 Contributions are welcome! Feel free to **fork this repository**, **open issues** for bugs or feature requests, or **submit pull requests** to improve the functionality.
 
-🛠 **Some ideas for improvement**
-
-- Implement automatic port detection for different operating systems.  
-- Add more robust error handling and logging.  
-- Include a `requirements.txt` file.  
-- Add more examples or advanced use cases.  
-- Create unit tests.
-
