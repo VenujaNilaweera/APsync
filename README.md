@@ -14,15 +14,18 @@ A robust, modular system for establishing and maintaining serial communication b
 
 ## 📁 Project Structure
 
-Arduino-Python-Connector/
-├── Arduino/
-│   ├── ArduinoConnector.h   # Arduino C++ class header file
-│   ├── ArduinoConnector.cpp # Arduino C++ class implementation
-│   └── test_arduino.ino     # Example Arduino sketch demonstrating usage
-├── Python/
-│   ├── arduino_connector.py # Python module for serial connection management
-│   └── test_python.py       # Example Python script demonstrating usage
-└── README.md                # This file
+* `## Directory Structure`: This creates a subheading.
+* ````
+    Arduino-Python-Connector/
+    ├── Arduino/
+    │   ├── ArduinoConnector.h        # Arduino class header
+    │   ├── ArduinoConnector.cpp      # Arduino class logic
+    │   └── test_arduino.ino          # Arduino sketch using the connector
+    ├── Python/
+    │   ├── arduino_connector.py      # Python connector module
+    │   └── test_python.py            # Test script for serial interaction
+    └── README.md                     # You’re reading it!
+    ````
 
 
 *(Note: The actual `ArduinoConnector.h`, `ArduinoConnector.cpp`, and `arduino_connector.py` files containing the class logic are assumed based on the structure but were not provided in the original prompt. The example code uses them.)*
