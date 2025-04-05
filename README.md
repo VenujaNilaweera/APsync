@@ -192,40 +192,38 @@ if __name__ == "__main__":
 ```
 
 
-## 🧰 Troubleshooting
+🚨 **Troubleshooting**
 
-### ❌ PermissionError: `[Errno 13] Permission denied: '/dev/tty...'`
+- **PermissionError: [Errno 13] Permission denied: '/dev/tty…'**  
+  • *(Linux/Mac)*: Ensure the Arduino IDE’s Serial Monitor is closed. Check that no other application is using the serial port.  
+  • You may need to add your user to the dialout group:  
+    `sudo usermod -a -G dialout $USER` *(then log out and back in)*  
+  • *(Windows)*: Ensure the Arduino board is plugged in correctly and not in use by other apps.
 
-- **Linux/macOS**:  
-  Ensure the Arduino IDE's Serial Monitor is **closed**. You may also need to add your user to the `dialout` group:
-  ```bash
-  sudo usermod -a -G dialout $USER
-Then log out and back in to apply the change.
+- **SerialException: Could not configure port or No response from COM port**  
+  • Verify the Arduino board is plugged in and powered.  
+  • Confirm the `test_arduino.ino` sketch (with the correct username) is uploaded successfully.  
+  • If the script doesn’t auto-detect the port, specify it manually in the ArduinoConnector initialization (if the class supports it).  
+  • Check the `arduino_connector.py` implementation.
 
-Windows:
-Ensure no other application is using the serial port, including the Arduino Serial Monitor.
+- **Authentication Fails**  
+  • Double-check that the username string in `test_arduino.ino` EXACTLY matches the one in `test_python.py`.  
+  • They are case-sensitive.
 
-⚠️ SerialException: Could not configure port / No response from COM port
-Verify the Arduino is connected and powered.
+- **Connection Drops Frequently**  
+  • Check the USB cable and connections.  
+  • Ensure the Arduino has sufficient power.  
+  • Look for blocking code or long delays in the Arduino `loop()`.
 
-Make sure the correct COM port is selected.
+🤝 **Contributing**
 
-Confirm that test_arduino.ino is uploaded correctly with the matching username.
+Contributions are welcome! Feel free to **fork this repository**, **open issues** for bugs or feature requests, or **submit pull requests** to improve the functionality.
 
-If the script can't auto-detect the port, you may need to set it manually in the ArduinoConnector initialization.
+🛠 **Some ideas for improvement**
 
-🔐 Authentication Fails
-Make sure the username string in test_arduino.ino exactly matches the one in test_python.py.
+- Implement automatic port detection for different operating systems.  
+- Add more robust error handling and logging.  
+- Include a `requirements.txt` file.  
+- Add more examples or advanced use cases.  
+- Create unit tests.
 
-Usernames are case-sensitive.
-
-🔌 Connection Drops Frequently
-Check your USB cable and port.
-
-Avoid blocking code or long delays in the Arduino loop() function.
-
-Ensure Arduino has sufficient power.
-
-🤝 Contributing
-Contributions are welcome!
-Feel free to fork this repository, open issues, or submit pull requests to improve functionality.
