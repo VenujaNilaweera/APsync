@@ -128,9 +128,10 @@ void loop() {
     digitalWrite(LED_BUILTIN, LOW); // Turn LED off if not authenticated
   }
 }
-Python (Python/test_python.py)
-Python
+```
+### Python Example (`Python/test_python.py`)
 
+```python
 import time
 from arduino_connector import ArduinoConnector # Assumes this module exists
 
@@ -183,10 +184,14 @@ def main():
             connector.close()
     else:
         print("⚠️ Failed to connect to Arduino. Make sure it’s plugged in, running the sketch, and the correct username is set.")
-        print("   Ensure no other application (like Arduino Serial Monitor) is using the port.")
+        print("    Ensure no other application (like Arduino Serial Monitor) is using the port.")
 
 if __name__ == "__main__":
     main()
+
+```
+
+
 🧰 Troubleshooting
 PermissionError: [Errno 13] Permission denied: '/dev/tty...' (Linux/Mac) or Access is denied. (Windows):
 Ensure the Arduino IDE's Serial Monitor is closed.
