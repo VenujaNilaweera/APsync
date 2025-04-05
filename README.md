@@ -36,9 +36,14 @@ Arduino-Python-Connector/
 └── README.md                      # You’re reading it!
 🔧 Arduino Setup
 test_arduino.ino
-cpp
-Copy
-Edit
+
+---
+
+## 🔧 Arduino Setup
+
+### 📝 `test_arduino.ino`
+
+```cpp
 #include "ArduinoConnector.h"
 
 ArduinoConnector connector("Venus");  // Username-based authentication
@@ -51,22 +56,24 @@ void handleCommand(String command) {
 }
 
 void setup() {
-  randomSeed(analogRead(0));
-  connector.begin(9600);
+  randomSeed(analogRead(0));           // Initialize random seed
+  connector.begin(9600);               // Start serial comm
   connector.setCommandCallback(handleCommand);
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);        // Optional LED indicator
 }
 
 void loop() {
-  connector.update();
+  connector.update();                  // Handle communication
   if (connector.isAuthenticated()) {
     static unsigned long lastSendTime = 0;
     if (millis() - lastSendTime > 5000) {
-      connector.sendData(String(random(1, 100)));
+      connector.sendData(String(random(1, 100)));  // Periodic random number
       lastSendTime = millis();
     }
   }
 }
+
+
 🐍 Python Script
 test_python.py
 python
