@@ -2,7 +2,7 @@
   <img src="APsync icon.png" alt="APsync Logo" width="300" height="300">
 </p>
 
-<h1 align="center">🔌 Vsync (Arduino-Python Auto-Connector)</h1>
+<h1 align="center">🔌 APsync (Arduino-Python Auto-Connector)</h1>
 <p align="center"><i>Reliable Serial Communication with Auto-Reconnect, Authentication, and More</i></p>
 
 
