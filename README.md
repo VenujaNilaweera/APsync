@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/APsync icon.png" alt="APsync Logo" width="80" height="80">
+  <img src="APsync icon.png" alt="APsync Logo" width="80" height="80">
 </p>
 
 <h1 align="center">🔌 Vsync (Arduino-Python Auto-Connector)</h1>
