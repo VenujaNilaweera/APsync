@@ -1,4 +1,10 @@
-# 🔌Vsync (Arduino-Python Auto-Connector)
+<p align="center">
+  <img src="assets/APsync icon.png" alt="APsync Logo" width="80" height="80">
+</p>
+
+<h1 align="center">🔌 Vsync (Arduino-Python Auto-Connector)</h1>
+<p align="center"><i>Reliable Serial Communication with Auto-Reconnect, Authentication, and More</i></p>
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
